@@ -11,7 +11,7 @@ RUN apt-get update && \
 RUN favorites_path="/root/My Games/Terraria" && mkdir -p "$favorites_path" && echo "{}" > "$favorites_path/favorites.json"
 
 # Download and install Vanilla Server
-ENV TERRARIA_VERSION=1432
+ENV TERRARIA_VERSION=1433
 
 RUN mkdir /tmp/terraria && \
     cd /tmp/terraria && \
@@ -24,7 +24,7 @@ RUN mkdir /tmp/terraria && \
     if [ ! -f /terraria/TerrariaServer ]; then echo "Missing /terraria/TerrariaServer"; exit 1; fi
 
 # Download and install tModLoader
-ENV TMOD_VERSION=0.11.8.5
+ENV TMOD_VERSION=0.11.8.9
 
 RUN mkdir /tmp/tmod && \
     cd /tmp/tmod &&\
